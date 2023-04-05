@@ -1,2 +1,4 @@
 # MentorPrise
-group 62 coursework prototype
+group 62 coursework prototype <br>
+
+pick the 'gh-pages' branch
