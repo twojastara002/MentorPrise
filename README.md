@@ -1,9 +1,9 @@
 # MentorPrise
 group 62 coursework prototype <br>
 When you get to this folder you need to clone and somehow hook the repo to your folders with git (i haven't done that so you need to find a way) <br>
-Then you can do: <br>
-  git branch -m gh-pages                                                  #set the page <br>
-  git remote add origin https://github.com/twojastara002/MentorPrise.git  #set the origin for commits <br>
+Then you can do this to set the page and origin: <br>
+  git branch -m gh-pages                                                   <br>
+  git remote add origin https://github.com/twojastara002/MentorPrise.git   <br>
 to set the right page to commit to and: <br>
   git commit 'pick a name for your commit eg what you edited'  <br>
   git push <br>
