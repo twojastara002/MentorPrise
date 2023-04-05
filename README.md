@@ -5,11 +5,10 @@ When you get to this folder you need to clone and somehow hook the repo to your 
 Then you can do this to set the page and origin: <br>
   git branch -m gh-pages                                                   <br>
   git remote add origin https://github.com/twojastara002/MentorPrise.git   <br>
-to set the right page to commit to and: <br>
+How to actually sync your work: <br>
   git add . <br>
   git commit -m 'pick a name for your commit eg what you edited' <br>
   git push -u origin gh-pages OR git push <br>
-This will let you upload your work. <br>
 <br>
 You might be required to add your credential when you get an error like 'git author unknown'. <br>
 I fixed with one command, try looking here. -> https://stackoverflow.com/questions/8283915/git-author-unknown <br>
