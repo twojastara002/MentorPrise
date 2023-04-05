@@ -6,8 +6,9 @@ Then you can do this to set the page and origin: <br>
   git branch -m gh-pages                                                   <br>
   git remote add origin https://github.com/twojastara002/MentorPrise.git   <br>
 to set the right page to commit to and: <br>
-  git commit 'pick a name for your commit eg what you edited'  <br>
-  git push <br>
+  git add . <br>
+  git commit -m 'pick a name for your commit eg what you edited' <br>
+  git push -u origin gh-pages OR git push <br>
 This will let you upload your work. <br>
 <br>
 You might be required to add your credential when you get an error like 'git author unknown'. <br>
