@@ -1,7 +1,8 @@
+import ListC from "./components/ListC";
 
 function App() {
   return (
-    <h1>21</h1>
+    <ListC/>
   )
 }
 
