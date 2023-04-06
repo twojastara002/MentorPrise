@@ -1,22 +1,18 @@
-import ListC from "./components/testing_and_cheatsheets/ListC";
-import ListC4 from "./components/testing_and_cheatsheets/ListC4";
-import ListC5 from "./components/testing_and_cheatsheets/ListC5";
+import Button from "./components/Button";
+import TriggerTextBox from "./components/TriggerTextBox";
+import { useState } from "react";
 
 function App() {
-  let items2 = ["l1", "sdgkds", "45839", "5235"];
+  let [textF1, setTextF1] = useState("");
 
-  const handleSelectItem = (item: string) => {
-    console.log("from the App: sdojgnskjdgn");
-  };
+  function handleButtonClick() {
+    setTextF1("new");
+  }
 
   return (
     <>
-      <ListC4 />
-      <ListC5
-        items={items2}
-        heading="AAAAAAAAAAAAA"
-        onSelectItem={handleSelectItem}
-      />
+      <TriggerTextBox value={textF1} />
+      <Button onClick={handleButtonClick} />
     </>
   );
 }
