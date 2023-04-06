@@ -15,3 +15,6 @@ You might be required to add your credential when you get an error like 'git aut
 I fixed with one command, try looking here. -> https://stackoverflow.com/questions/8283915/git-author-unknown <br>
 It will only work with an account that i managed to add because some people gave me their usernames to add them to the repository. <br>
 Message me your email or your username on github so i can add you. <br>
+<br>
+When you manage to pull the project you still need to use this command when in the main directory of the project <br>
+npm install <br>
