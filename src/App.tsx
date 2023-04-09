@@ -1,6 +1,5 @@
-import Button from "./components/Button";
-import TriggerTextBox from "./components/TriggerTextBox";
 import { useState } from "react";
+import TestHTTP from "./components/TestHTTP";
 
 function App() {
   let [textF1, setTextF1] = useState("");
@@ -9,12 +8,7 @@ function App() {
     setTextF1("new");
   }
 
-  return (
-    <>
-      <TriggerTextBox value={textF1} />
-      <Button onClick={handleButtonClick} />
-    </>
-  );
+  return <TestHTTP />;
 }
 
 export default App;
