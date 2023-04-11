@@ -32,6 +32,16 @@ const Registration: React.FC<RegistrationItems> = ({
     };
 
     const handleRegisterClick = () => {
+
+        if (!/\S+@\S+\.\S+/.test(email)) {
+            setErrorMessage("Please enter a valid email address.");
+            return;
+        }
+
+        if (!name || !email || !password || !confirmPassword) {
+            setErrorMessage('All fields are required');
+            return;
+        }
         if (password !== confirmPassword) {
             setErrorMessage("Passwords do not match");
             return;

@@ -17,7 +17,7 @@ const Match: React.FC = () => {
             <div className="filters-container">
                 <h2>FILTERS</h2>
                 <label className="filters-label">
-                <hr className='header-line'/>
+                    <hr className='header-line' />
                     <input
                         type='checkbox'
                         className='filters-checkbox'
@@ -111,21 +111,6 @@ const Match: React.FC = () => {
                 <label className='filters-label'>
                     <input
                         type='checkbox'
-                        value='Data Engineering'
-                        onChange={(e) =>
-                            updateFilters(
-                                e.target.checked
-                                    ? [...filters, e.target.value]
-
-                                    : filters.filter((filter) => filter !== e.target.value)
-                            )
-                        }
-                    />
-                    &nbsp; Data Engineering
-                </label>
-                <label className='filters-label'>
-                    <input
-                        type='checkbox'
                         value='Salesforce Developer'
                         onChange={(e) =>
                             updateFilters(
@@ -137,6 +122,21 @@ const Match: React.FC = () => {
                         }
                     />
                     &nbsp; Salesforce Developer
+                </label>
+                <label className='filters-label'>
+                    <input
+                        type='checkbox'
+                        value='Data Engineering'
+                        onChange={(e) =>
+                            updateFilters(
+                                e.target.checked
+                                    ? [...filters, e.target.value]
+
+                                    : filters.filter((filter) => filter !== e.target.value)
+                            )
+                        }
+                    />
+                    &nbsp; Data Engineering
                 </label>
                 <label className="filters-label">
                     <strong>YEARS OF EXPERIENCE:</strong>

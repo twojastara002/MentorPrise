@@ -42,15 +42,6 @@ const NavigationBar: React.FC<NavigationBarItems> = ({
                             MENTORPRISE
                         </a>
                     </li>
-                    <li>
-                        <a
-                            className={currentPage === 'Match' ? 'active' : ''}
-                            href='/#match'
-                            onClick={() => handleWebpageChange('Match')}
-                        >
-                            match
-                        </a>
-                    </li>
                     {isLoggedIn && user && (
                         <li>
                             <a
@@ -63,8 +54,19 @@ const NavigationBar: React.FC<NavigationBarItems> = ({
                         </li>
                     )}
                     <li>
+                        <a
+                            className={currentPage === 'Match' ? 'active' : ''}
+                            href='/#match'
+                            onClick={() => handleWebpageChange('Match')}
+                        >
+                            match
+                        </a>
+                    </li>
+                    <li>
                         {isLoggedIn ? (
-                            <button onClick={onLogoutClick}>Logout</button>
+                            <a href='#' onClick={onLogoutClick}>
+                                logout
+                            </a>
                         ) : (
                             <a
                                 className={currentPage === 'LoginRegister' ? 'active' : ''}
