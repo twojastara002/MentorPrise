@@ -1,0 +1,43 @@
+/* Home page styles */
+
+/* Set background color for the whole page */
+body {
+    background-color: #bebebe;
+}
+
+/* Style for the main heading */
+h1 {
+    font-size: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+    color: #000000;
+}
+
+/* Style for the main content section */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the buttons */
+button {
+    font-size: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}

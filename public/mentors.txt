@@ -1,0 +1,7 @@
+John Smith, 5,Technical Operations
+Sarah Lee, 10,Software Development
+David Lee, 3,Business Analysis
+Emily Chen, 8,Business Intelligence
+Jason Marc, 20,Business Intelligence
+Michele Richards, 15,Software Development
+Priscilla Peters, 7,Data Engineering
