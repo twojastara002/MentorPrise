@@ -40,7 +40,7 @@ const Login: React.FC<LoginItems> = ({
     xhr.onload = () => {
       userDetails = xhr.responseText.split(",");
 
-      if (xhr.response != "Incorrect login.") {
+      if (xhr.response != "Incorrect login." && xhr.status == 200) {
         //if login successful
 
         let userEmail = userDetails[0];
