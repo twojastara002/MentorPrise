@@ -19,5 +19,17 @@
     "@vitejs/plugin-react": "^3.1.0",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
-  }
+  },
+  "description": "group 62 coursework prototype <br>\r <br>\r When you get to this folder you need to clone and somehow hook the repo to your folders with git (i haven't done that so you need to find a way) <br>\r Then you can do this to set the page and origin: <br>\r git remote add origin https://github.com/twojastara002/MentorPrise.git <br>\r git branch -m gh-pages <br>\r How to actually sync your work: <br>\r git add . <br>\r git commit -m 'pick a name for your commit eg what you edited' <br>\r git push -u origin gh-pages OR git push <br>\r <br>\r You might be required to add your credential when you get an error like 'git author unknown'. <br>\r I fixed with one command, try looking here. -> https://stackoverflow.com/questions/8283915/git-author-unknown <br>\r It will only work with an account that i managed to add because some people gave me their usernames to add them to the repository. <br>\r Message me your email or your username on github so i can add you. <br>\r <br>\r When you manage to pull the project you still need to use this command when in the main directory of the project <br>\r npm install <br>",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twojastara002/MentorPrise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twojastara002/MentorPrise/issues"
+  },
+  "homepage": "https://github.com/twojastara002/MentorPrise#readme"
 }

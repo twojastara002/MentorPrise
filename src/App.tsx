@@ -7,6 +7,8 @@ import Match from "./components/Match";
 import Login from './components/Login';
 import UserProfile from './components/UserProfile';
 import './css/pages.css'
+import TestHTTP from './components/TestHTTP';
+
 
 export interface User {
   name: string;
@@ -17,6 +19,11 @@ const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState("Home");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<User | null>(null);
+  let [textF1, setTextF1] = useState("");
+
+  const handleButtonClick = () => {
+    setTextF1("new");
+  }
 
   const handleLoginClick = () => {
     setCurrentPage("Login/Register");
