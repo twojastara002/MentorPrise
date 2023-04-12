@@ -1,4 +1,4 @@
-
+import '../css/profile.css
 import React from "react";
 
 interface UserProfileProps {
