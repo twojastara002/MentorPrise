@@ -48,6 +48,20 @@ const App: React.FC = () => {
     setCurrentPage("Home");
   };
 
+  const handleRemoveUserMatches = () => {
+    if (user) {
+      let xhr = new XMLHttpRequest();
+      xhr.open(
+        "GET",
+        "http://localhost:" + globalServerPort + "/match/remove/" + user.email
+      );
+      xhr.onload = () => {
+        alert("All your matches removed.");
+      };
+      xhr.send();
+    }
+  };
+
   const pageNavigation = (webpage: string) => {
     setCurrentPage(webpage);
   };
@@ -77,7 +91,7 @@ const App: React.FC = () => {
           <UserProfile
             email={user.email}
             name={user.name}
-            onLogout={handleLogoutClick}
+            onDeleteMatches={handleRemoveUserMatches}
           />
         )}
         {currentPage === "AddPreference" && user && (
