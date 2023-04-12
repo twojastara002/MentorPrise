@@ -7,7 +7,13 @@
     border-bottom-left-radius: 94px;
     border-bottom-right-radius: 94px;
     margin-bottom: 40px;
+    border-bottom: 10px white;
 
+}
+
+.logo-text {
+    font-size: 40px;
+    font-style: italic;
 }
 
 .NavigationBar ul {
@@ -38,10 +44,48 @@
     color: #f8f8f8;
 }
 
-
-.NavigationBar ul li:first-child a {
+.NavigationBar li:first-child a.mentorprise {
+    font-size: 40px;
     font-style: italic;
-    font-size: 45px;
+    margin-right: 0;
+}
 
+.dropdown-box {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 200px;
+    border-radius: 20px;
+    left: 410px;
+    bottom: 830px;
+    pointer-events: all;
+}
+
+.dropdown-box-container:nth-child(1) {
+    background-color: #3d55e296;
+    margin-bottom: -21px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.dropdown-box-container:nth-child(2) {
+    background-color: #283fbdb9;
+    margin-bottom: -10px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.dropdown-item {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    width: 10px;
+    color: #ffffff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
 
 }

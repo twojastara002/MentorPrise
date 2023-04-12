@@ -1,8 +1,9 @@
 /* Home page styles */
 
 /* Set background color for the whole page */
-body {
-    background-color: #bebebe;
+body.home {
+    background-image: url('src/assets/Homepage.jpg');
+    background-size: cover;
 }
 
 /* Style for the main heading */
