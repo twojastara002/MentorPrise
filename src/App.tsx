@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import UserProfile from "./components/UserProfile";
 import "./css/pages.css";
 import TestHTTP from "./components/TestHTTP";
+import Preference from "./components/Preference";
 
 //THIS PORT HAS TO MATCH THE SAME PORT THE SERVER IS LISTENING TO
 const globalServerPort = 3000;
@@ -19,15 +20,17 @@ export interface User {
   password: string;
 }
 
+export interface PreferenceFile {
+  userEmail: string;
+  branch: string;
+  yearsExp: number;
+  department: string;
+}
+
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState("Home");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<User | null>(null);
-  let [textF1, setTextF1] = useState("");
-
-  const handleButtonClick = () => {
-    setTextF1("new");
-  };
 
   const handleLoginClick = () => {
     setCurrentPage("Login/Register");
@@ -48,6 +51,8 @@ const App: React.FC = () => {
   const pageNavigation = (webpage: string) => {
     setCurrentPage(webpage);
   };
+
+  const handleAddedPreference = (pref: PreferenceFile) => {};
 
   return (
     <div className="App">
@@ -73,6 +78,13 @@ const App: React.FC = () => {
             email={user.email}
             name={user.name}
             onLogout={handleLogoutClick}
+          />
+        )}
+        {currentPage === "AddPreference" && user && (
+          <Preference
+            serverPort={globalServerPort}
+            currentUser={user}
+            addedPreferenceSuccess={handleAddedPreference}
           />
         )}
       </div>
