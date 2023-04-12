@@ -9,7 +9,8 @@ import UserProfile from "./components/UserProfile";
 import "./css/pages.css";
 import TestHTTP from "./components/TestHTTP";
 
-const globalServerPort = 5175;
+//THIS PORT HAS TO MATCH THE SAME PORT THE SERVER IS LISTENING TO
+const globalServerPort = 3000;
 
 export interface User {
   name: string;
