@@ -9,6 +9,8 @@ import UserProfile from "./components/UserProfile";
 import "./css/pages.css";
 import TestHTTP from "./components/TestHTTP";
 import Preference from "./components/Preference";
+import MatchMain from './components/MatchMain';
+import AutoMatch from "./components/AutoMatch";
 
 //THIS PORT HAS TO MATCH THE SAME PORT THE SERVER IS LISTENING TO
 const globalServerPort = 3000;
@@ -31,6 +33,11 @@ const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState("Home");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<User | null>(null);
+  let [textF1, setTextF1] = useState("");
+
+  const handleButtonClick = () => {
+    setTextF1("new");
+  };
 
   const handleLoginClick = () => {
     setCurrentPage("Login/Register");
@@ -62,11 +69,14 @@ const App: React.FC = () => {
     }
   };
 
+
   const pageNavigation = (webpage: string) => {
     setCurrentPage(webpage);
   };
 
-  const handleAddedPreference = (pref: PreferenceFile) => {};
+  function handleAddedPreference(pref: PreferenceFile): void {
+    throw new Error("Function not implemented.");
+  }
 
   return (
     <div className="App">
@@ -78,7 +88,12 @@ const App: React.FC = () => {
         pageNavigation={pageNavigation}
         user={user}
       />
+
+      {currentPage === 'MatchMain' &&
+        <MatchMain isLoggedIn={isLoggedIn}
+          handleWebpageChange={pageNavigation} />}
       <div className="page-container">
+        {currentPage === "AutoMatch" && <AutoMatch />}
         {currentPage === "Home" && <Home />}
         {currentPage === "Match" && <Match />}
         {currentPage === "Login/Register" && (
@@ -87,6 +102,7 @@ const App: React.FC = () => {
             serverPort={globalServerPort}
           />
         )}
+
         {currentPage === "UserProfile" && user && (
           <UserProfile
             email={user.email}
