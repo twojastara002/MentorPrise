@@ -91,6 +91,7 @@ const App: React.FC = () => {
           <UserProfile
             email={user.email}
             name={user.name}
+            serverPort={globalServerPort}
             onDeleteMatches={handleRemoveUserMatches}
           />
         )}

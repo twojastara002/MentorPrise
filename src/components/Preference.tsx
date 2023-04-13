@@ -141,6 +141,10 @@ const Preference: React.FC<PreferenceItems> = ({
         </>
       </div>
       <div className="preference-showcase">
+        <Button
+          label="Load Preferences"
+          onClick={handleCurrentPreferenceChange}
+        />
         {preferenceDisplay.map((row) => (
           <p>{row}</p>
         ))}
