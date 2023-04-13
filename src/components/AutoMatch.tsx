@@ -44,18 +44,6 @@ function AutoMatch({ currentUser, serverPort }: MatchItems) {
     if (currentUser != null) {
       let xhr = new XMLHttpRequest();
       let matchEmail = matchResult.split(", ")[1];
-      // console.log("hello");
-      // console.log(currentUser.email);
-      // console.log(matchEmail);
-      // let requestString =
-      //   "http://localhost:" +
-      //   serverPort +
-      //   "/match/create/" +
-      //   currentUser.email +
-      //   "-" +
-      //   matchEmail;
-      // console.log(requestString);
-
       xhr.open(
         "GET",
         "http://localhost:" +
