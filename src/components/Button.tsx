@@ -1,5 +1,6 @@
 import TriggerTextBox from "./TriggerTextBox";
 
+//creates a button that can be called whenever one needs to be created
 interface ButtonProps {
   onClick: () => void;
   label: string;

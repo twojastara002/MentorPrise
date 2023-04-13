@@ -25,12 +25,14 @@ const MatchMain: React.FC<MatchMainItems> = ({ isLoggedIn, handleWebpageChange }
 
     return (
         <div>
-            <h1>FDM MENTOR MATCHING</h1>
-            <p>We understand that it is not always easy in the workplace</p>
-            <div>
-                <div className="button-container">
-                    <button onClick={handleAutoMatchClick}>Auto Match</button>
-                    <button onClick={handleManualMatchClick}>Manual Match</button>
+            <div className='main-match-container'>
+                <h2>FDM MENTOR MATCHING</h2>
+                <p>We understand that it is not always easy in the workplace</p>
+                <div>
+                    <div className="button-container">
+                        <button onClick={handleAutoMatchClick}>Auto Match</button>
+                        <button onClick={handleManualMatchClick}>Manual Match</button>
+                    </div>
                 </div>
             </div>
         </div>

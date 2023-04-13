@@ -13,10 +13,7 @@ const Match: React.FC = () => {
         setFilters(newFilters);
     };
 
-    const updateLocationFilter = (newLocation: string[]) => {
-        setLocation(newLocation);
-    }
-
+    //filters and range bar on the side that change the menotrs shown when they are checked
     return (
         <div className="matches-containter">
             <div className="filters-container">
@@ -146,22 +143,6 @@ const Match: React.FC = () => {
                     &nbsp; Data Engineering
                 </label>
                 <label className="filters-label">
-                    <strong>LOCATION:</strong>
-                    <br />
-                    <input
-                        type='checkbox'
-                        value='London'
-                        onChange={(e) =>
-                            updateLocationFilter(
-                                e.target.checked
-                                    ? [...location, e.target.value]
-                                    : location.filter((location) => location !== e.target.value)
-                            )
-                        }
-                    />
-                    &nbsp; London
-                </label>
-                <label className="filters-label">
                     <strong>YEARS OF EXPERIENCE:</strong>
                     <br />
                     <label>
@@ -194,7 +175,7 @@ const Match: React.FC = () => {
 
             </div>
             <div className='mentors-container'>
-                <MentorList filters={filters} minExp={minExp} maxExp={maxExp} location={location}/>
+                <MentorList filters={filters} minExp={minExp} maxExp={maxExp} location={location} />
             </div>
         </div>
     );
