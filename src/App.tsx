@@ -9,7 +9,7 @@ import UserProfile from "./components/UserProfile";
 import "./css/pages.css";
 import TestHTTP from "./components/TestHTTP";
 import Preference from "./components/Preference";
-import MatchMain from "./components/MatchMain";
+import MatchMain from './components/MatchMain';
 import AutoMatch from "./components/AutoMatch";
 
 //THIS PORT HAS TO MATCH THE SAME PORT THE SERVER IS LISTENING TO
@@ -34,6 +34,7 @@ const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<User | null>(null);
 
+
   const handleLoginClick = () => {
     setCurrentPage("Login/Register");
   };
@@ -50,6 +51,10 @@ const App: React.FC = () => {
     setCurrentPage("Home");
   };
 
+  const handleClick = () => {
+    setCurrentPage("MatchMain");
+  };
+
   const handleRemoveUserMatches = () => {
     if (user) {
       let xhr = new XMLHttpRequest();
@@ -63,6 +68,7 @@ const App: React.FC = () => {
       xhr.send();
     }
   };
+
 
   const pageNavigation = (webpage: string) => {
     setCurrentPage(webpage);
@@ -83,17 +89,13 @@ const App: React.FC = () => {
         user={user}
       />
 
-      {currentPage === "MatchMain" && (
-        <MatchMain
-          isLoggedIn={isLoggedIn}
-          handleWebpageChange={pageNavigation}
-        />
-      )}
+      {currentPage === 'MatchMain' &&
+        <MatchMain isLoggedIn={isLoggedIn}
+          handleWebpageChange={pageNavigation} />}
       <div className="page-container">
-        {currentPage === "AutoMatch" && (
-          <AutoMatch currentUser={user} serverPort={globalServerPort} />
-        )}
-        {currentPage === "Home" && <Home />}
+        {currentPage === "AutoMatch" &&
+          <AutoMatch currentUser={user} serverPort={globalServerPort} />}
+        {currentPage === "Home" && <Home handleClick={handleClick} />}
         {currentPage === "Match" && <Match />}
         {currentPage === "Login/Register" && (
           <Login
