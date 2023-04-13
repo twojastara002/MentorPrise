@@ -1,5 +1,6 @@
 body { 
     background-image: linear-gradient(to bottom, #d3d4e0, #5a52ad);
+    position: relative;
 
 }
 
@@ -7,9 +8,11 @@ body {
     background-image: linear-gradient(to bottom, #706da1, #3702ca);
     border: 4px solid #514a9e;
     border-radius: 60px;
-    padding: 50px;
+    padding: 80px;
     margin: 20px auto;
     max-width: 400px;
+    margin-top: 150px;
+    align-items: center;
 }
 
 .login-container input[type="text"],

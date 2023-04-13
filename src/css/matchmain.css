@@ -8,7 +8,7 @@
     display: inline-block;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     margin: 10px;
     gap: 10px;
     margin-top: 20px;
@@ -20,19 +20,24 @@
     margin-top: 20px;
 }
 
-p {
-    font-size: 20px;
+.main-match-container>p {
+    font-size: 30px;
     color: #f8f8f8;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-
 
 }
 
-h1 {
+.main-match-container>h2 {
     color: #f8f8f8;
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 70px;
+    font-size: 90px;
+    text-decoration: underline;
+}
+
+.main-match-container {
+    text-align: center;
+    margin-top: 200px;
+
 }
