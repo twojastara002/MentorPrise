@@ -6,11 +6,16 @@ const Match: React.FC = () => {
     const [filters, setFilters] = useState<string[]>([]);
     const [minExp, setMinExp] = useState<number>(0);
     const [maxExp, setMaxExp] = useState<number>(50);
+    const [location, setLocation] = useState<string[]>([]);
 
     //function to update filters
     const updateFilters = (newFilters: string[]) => {
         setFilters(newFilters);
     };
+
+    const updateLocationFilter = (newLocation: string[]) => {
+        setLocation(newLocation);
+    }
 
     return (
         <div className="matches-containter">
@@ -18,6 +23,8 @@ const Match: React.FC = () => {
                 <h2>FILTERS</h2>
                 <label className="filters-label">
                     <hr className='header-line' />
+                    <strong>DEPARTMENT:</strong>
+                    <br />
                     <input
                         type='checkbox'
                         className='filters-checkbox'
@@ -139,6 +146,22 @@ const Match: React.FC = () => {
                     &nbsp; Data Engineering
                 </label>
                 <label className="filters-label">
+                    <strong>LOCATION:</strong>
+                    <br />
+                    <input
+                        type='checkbox'
+                        value='London'
+                        onChange={(e) =>
+                            updateLocationFilter(
+                                e.target.checked
+                                    ? [...location, e.target.value]
+                                    : location.filter((location) => location !== e.target.value)
+                            )
+                        }
+                    />
+                    &nbsp; London
+                </label>
+                <label className="filters-label">
                     <strong>YEARS OF EXPERIENCE:</strong>
                     <br />
                     <label>
@@ -166,10 +189,12 @@ const Match: React.FC = () => {
                         />
                         {maxExp}
                     </label>
+
                 </label>
+
             </div>
             <div className='mentors-container'>
-                <MentorList filters={filters} minExp={minExp} maxExp={maxExp} />
+                <MentorList filters={filters} minExp={minExp} maxExp={maxExp} location={location}/>
             </div>
         </div>
     );
